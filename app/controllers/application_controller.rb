@@ -17,14 +17,17 @@ class ApplicationController < Sinatra::Base
       redirect to '/account'
     else
       erb :error
-    end 
+    end
   end
 
   get '/account' do
+    erb :account
 
   end
 
   get '/logout' do
+    session.clear
+    redirect to '/'
 
   end
 
